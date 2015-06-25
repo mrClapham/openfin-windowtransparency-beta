@@ -1,0 +1,1188 @@
+<html>
+<head>
+  <link rel="import" href="https://raw.githubusercontent.com/openfin/fin-hypergrid/master/fin-hypergrid.min.html">
+  <!-- <link rel="import" href="../polymer/html/fin-hypergrid.html"> -->
+</head>
+<style>
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+ html {
+ 	overflow: scroll;
+}
+ body {
+ 	margin: 0;
+ 	padding: 0;
+ }
+ fin-hypergrid {
+ 	width: 100px;
+ 	height: 50px;
+ 	position: relative;
+ }
+ table {
+	
+ }
+ td {
+ 	padding: 10px;
+ 	position: relative;
+ }
+
+ .drg {
+	/*position: absolute;*/
+	top: 0;
+	left: 0;
+	background-color:steelblue;
+	padding-top: 10px;
+	width: 50px;
+	height: 100px;
+
+}
+.drg.gr {
+	background-color: goldenrod;
+}
+body {
+	background-color:rgb(54,0,54);
+}
+
+.winctrl {
+	width: 300;
+	height: 400;
+	background-color: goldenrod;
+	position: absolute;
+	top:50%;
+	left: 50%;
+}
+
+.ladder {
+	background-color: silver;
+	display: flex;
+	flex-direction: column;
+	height: 175px;
+	width: 80px;
+	padding: 2px;
+}
+
+.l-head {
+	display: flex;
+	flex:1;
+	background-color: silver;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.l-body {
+	
+	flex:5;
+	background-color: wheat;
+	padding: 2px;
+}
+
+.nolist {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+.close {
+	
+	width: 20px;
+	height: 20px;
+	border-radius: 10px 10px;
+	background-color: steelblue;
+	margin-left: 55px;
+}
+</style>
+<body>
+	<table style="display:none;">
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+			<td>
+				<div class="drg"><fin-hypergrid>
+				    <fin-hypergrid-behavior-default></fin-hypergrid-behavior-default>
+				</fin-hypergrid></div>
+			</td>
+		</tr>
+		
+	<table>
+	
+	<div class="winctrl drag">
+		<button id="mk-wind">Make Windows</button>
+		<span id="close">close</span>
+	</div>
+
+	<div class="ladder drag">
+		<div class="close"></div>
+		<div class="l-body">
+			
+			<ul class="nolist">
+				<li>10 | 20</li><li>10 | 20</li><li>10 | 20</li><li>10 | 20</li>
+				<li>10 | 20</li><li>10 | 20</li><li>10 | 20</li><li>10 | 20</li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+
+	//TODO:
+	//	XXXX make the size of monitors
+	//	add control (close) to each
+	//	make control app close entire app
+	//	
+	// document.querySelector('.winctrl')
+	// document.querySelector('.close')
+	// 
+	// 
+	
+
+	fin.desktop.main(function(){
+		var win = fin.desktop.Window.getCurrent();
+
+		fin.desktop.System.getMonitorInfo(function (monitorInfo) {
+		    console.log("This object contains information about all monitors: ", monitorInfo.primaryMonitor.availableRect);
+		    var mainWindow = fin.desktop.Window.getCurrent();
+		    var rec = monitorInfo.primaryMonitor.availableRect;
+
+		    mainWindow.setBounds(rec.left, rec.top, (rec.right - rec.left) / 2, rec.bottom - rec.top)
+			//mainWindow.setBounds(100, 200, 400, 400);
+		});
+	});
+	
+		var targetedElement, startingTrans, x, y,
+			targetDivs = Array.prototype.slice.call(document.querySelectorAll('.drg')),
+			hgrids = [], 
+			numGrids = 10,
+			grid, i = 0;
+
+		//clone node? 
+		for (; i < numGrids; i++) {
+			grid = document.createElement('div');
+			grid.classList.add('drg');
+			grid.innerHTML = 'X<fin-hypergrid><fin-hypergrid-behavior-default></fin-hypergrid-behavior-default></fin-hypergrid>';
+			hgrids.push(grid);
+		}
+
+		document.querySelector('#mk-wind')
+			.addEventListener('click', function(e){
+
+				var ladder = document.querySelector('.ladder'),
+					i = 50;
+
+				while (i--) {
+					document.body.appendChild(ladder.cloneNode(true));
+
+				}
+				// hgrids.forEach(function(grd){
+				// 	document.body.appendChild(grd);
+				// });
+			});
+
+		document.querySelector('#close')
+			.addEventListener('click', function(e){
+				console.log('click', e);
+				fin.desktop.Application.getCurrent().close();
+			});
+
+
+		document.addEventListener('mousedown', function(e){
+			if (e.target.classList.contains('drag')) {
+				targetedElement = e.target;
+				x = e.x;
+				y = e.y;
+				startingTrans = targetedElement.style.transform.match(/([^(]?\d+)/g) || [0, 0];
+
+				console.log(startingTrans, targetedElement.style.transform);
+			}
+			
+			if (e.target.classList.contains('close')) {
+				e.path[2].removeChild(e.path[1]);
+			}
+		});
+
+		document.addEventListener('mouseup', function(e){
+			targetedElement = false;
+			startingTrans = [0,0];
+			x = y = 0;
+		});
+
+		document.addEventListener('mousemove',function(e){
+			var xMovement, yMovement;
+			if (targetedElement) {
+				xMovement = startingTrans[0] - (x - e.x);
+				yMovement = startingTrans[1] - (y - e.y);
+
+				targetedElement.style.cssText = ['transform: translateX(',
+					xMovement,
+					'px) translateY(',
+					yMovement,
+					'px);'].join('');
+			}
+
+		});
+
+
+		// document.addEventListener('mousedown', function(e){
+		// 	if (targetDivs.indexOf(e.target)  !== -1) {
+		// 		targetedElement = e.target;
+		// 		x = e.x;
+		// 		y = e.y;
+		// 		startingTrans = /(\d+)/.exec(targetedElement.style.transform) || [0, 0];
+		// 	}
+		// });
+
+		// document.addEventListener('mouseup', function(e){
+		// 	targetedElement = false;
+		// });
+
+		// document.addEventListener('mousemove',function(e){
+		// 	var xMovement, yMovement;
+		// 	if (targetedElement) {
+		// 		xMovement = startingTrans[0] - (x - e.x);
+		// 		yMovement = startingTrans[1] - (y - e.y);
+
+		// 		targetedElement.style.cssText = ['transform: translateX(',
+		// 			xMovement,
+		// 			'px) translateY(',
+		// 			yMovement,
+		// 			'px);'].join('');
+		// 	}
+
+		// });
+	</script>
+</body>
+</html>
+
