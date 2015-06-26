@@ -23,14 +23,7 @@
  	padding: 0;
  	user-select: none;
  }
- fin-hypergrid {
- 	width: 100px;
- 	height: 50px;
- 	position: relative;
- }
- table {
-	
- }
+
  td {
  	padding: 10px;
  	position: relative;
@@ -56,21 +49,22 @@ body {
 }
 
 .winctrl {
-	width: 300;
-	height: 400;
-	background-color: goldenrod;
+	width: 400;
+	height: 205;
+	background-color: slategray;
 	position: absolute;
 	top:50%;
 	left: 50%;
 	z-index: 2;
+	padding: 10px;
 }
 
 .ladder {
 	background-color: silver;
 	display: flex;
 	flex-direction: column;
-	height: 175px;
-	width: 80px;
+	height: 200px;
+	width: 150px;
 	padding: 2px;
 	position: absolute;
 	z-index: 1;
@@ -87,7 +81,7 @@ body {
 .l-body {
 	
 	flex:5;
-	background-color: wheat;
+	background-color: slategray;
 	padding: 2px;
 }
 
@@ -98,30 +92,54 @@ body {
 	text-align: center;
 }
 .close {
-	
 	width: 20px;
 	height: 20px;
 	border-radius: 10px 10px;
-	background-color: steelblue;
-	margin-left: 55px;
+	background-color: firebrick;
+	margin-left: 130px;
 }
 fin-hypergrid {
 	width: 100%;
-	height: 100%;
+	height: 175px;
 }
+
+p {
+	-webkit-user-select: none;
+	background-color: gainsboro;
+	padding: 2px;
+}
+
+h2 {
+	background-color: gainsboro;
+	display: inline-block;
+	margin: 10px 0;
+}
+button {
+	background-color: springgreen;
+}
+
 </style>
 <body>
 	
 	<div class="winctrl drag">
-		<button id="mk-wind">Make Windows</button>
-		<span id="close">close</span>
+		<h2>Demo Alpla Mask</h2>
+		<p>
+			This div can be dragged (dark gray). The gray portion of the generated Hypergrids
+			is the handle to drag. The red circle removes the ladder from the dom.
+			Being a POC, little consideration was given for UX so far...
+		</p>
+		<p>
+			Generate 200 Hypergrids 
+			<button id="mk-wind">Make Windows</button>
+		</p>
+		<span id="close">close app</span>
 	</div>
 
 	<div class="ladder drag" style="display:none">
 		<div class="close"></div>
 		<div class="l-body">
 
-		<fin-hypergrid><fin-hypergrid-behavior-default></fin-hypergrid-behavior-default></fin-hypergrid>
+		<fin-hypergrid><fin-hypergrid-behavior-json></fin-hypergrid-behavior-json></fin-hypergrid>
 			
 <!-- 			<ul class="nolist">
 				<li>10 | 20</li><li>10 | 20</li><li>10 | 20</li><li>10 | 20</li>
@@ -146,10 +164,67 @@ fin-hypergrid {
 
 	
 		var targetedElement, startingTrans, x, y, grid,
-			offset_X = 90,
-			offset_Ypx = 190,
+			offset_X = 160,
+			offset_Ypx = 210,
 			columns = 25,
 			numLadders = 200;
+
+
+	    var randomRow = function() {
+	         var row = {
+	            asks: (Math.random() * 100).toFixed(0),
+	            bids: (Math.random() * 100).toFixed(0),
+	            price: (Math.random() * 1000).toFixed(3),
+	            ltq: (Math.random() * 1000).toFixed(0)
+	        };
+	        return row;
+	    };
+
+	    var generateRandomData = function() {
+	        var rowCount = 1000;
+	        var data = new Array(rowCount);
+	        for (var i = 0; i < rowCount; i ++) {
+	            data[i] = randomRow();
+	        }
+	        return data;
+	    };
+
+
+		var lnfOverrides = {
+	        font: '13px Tahoma, Geneva, sans-serif',
+	        color: '#ffffff',
+	        backgroundColor: '#505050',
+	        foregroundSelColor: 'rgb(25, 25, 25)',
+	        backgroundSelColor: 'rgb(183, 219, 255)',
+
+	        topLeftFont: '14px Tahoma, Geneva, sans-serif',
+	        topLeftColor: 'rgb(25, 25, 25)',
+	        topLeftBackgroundColor: 'rgb(223, 227, 232)',
+	        topLeftFGSelColor: 'rgb(25, 25, 25)',
+	        topLeftBGSelColor: 'rgb(255, 220, 97)',
+
+	        fixedColumnFont: '14px Tahoma, Geneva, sans-serif',
+	        fixedColumnColor: 'rgb(25, 25, 25)',
+	        fixedColumnBackgroundColor: 'rgb(223, 227, 232)',
+	        fixedColumnFGSelColor: 'rgb(25, 25, 25)',
+	        fixedColumnBGSelColor: 'rgb(255, 220, 97)',
+
+	        fixedRowFont: '11px Tahoma, Geneva, sans-serif',
+	        fixedRowColor: '#ffffff',
+	        fixedRowBackgroundColor: '#303030',
+	        fixedRowFGSelColor: 'rgb(25, 25, 25)',
+	        fixedRowBGSelColor: 'rgb(255, 220, 97)',
+
+	        backgroundColor2: '#303030',
+	        lineColor: '#707070',
+	        voffset: 0,
+	        scrollingEnabled: false,
+
+	        defaultRowHeight: 20,
+	        defaultFixedRowHeight: 20,
+	        defaultColumnWidth: 100,
+	        defaultFixedColumnWidth: 100
+	    }
 
 					
 		// use doc frag here...
@@ -165,8 +240,11 @@ fin-hypergrid {
 
 				for (; i < numLadders; i++) {
 					tmpLadder = ladder.cloneNode(true);
+
+					tmpLadder.querySelector('fin-hypergrid').addGlobalProperties(lnfOverrides)
+					tmpLadder.querySelector('fin-hypergrid-behavior-json').setData(generateRandomData());
 					
-					tmpLadder.style.left = runningOffsetX	; 
+					tmpLadder.style.left = runningOffsetX; 
 					tmpLadder.style.top = runningOffsetY;
 					tmpLadder.style.display = 'block';
 
@@ -189,6 +267,8 @@ fin-hypergrid {
 		document.addEventListener('mousedown', function(e){
 			var target = e.target,
 				path = e.path;
+
+			console.log(path);
 
 			if (target.classList.contains('drag')) {
 				targetedElement = target;
