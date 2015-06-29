@@ -27,6 +27,8 @@ document.querySelector('#mk-wind')
             tmpLadder.querySelector('fin-hypergrid').addGlobalProperties(lnfOverrides)
             tmpLadder.querySelector('fin-hypergrid-behavior-json').setData(generateRandomData());
 
+            tmpLadder.querySelector('.ladder-num').innerHTML = 'Ladder: ' + i;
+
             tmpLadder.style.left = runningOffsetX;
             tmpLadder.style.top = runningOffsetY;
             tmpLadder.style.display = 'block';
@@ -131,6 +133,28 @@ fin.desktop.main(function() {
 
 
 /**
+ *
+ * 	Simulate ticking data
+ * 	
+ */
+
+(function fakeTicks(){
+
+	var tmp = Array.prototype.forEach
+		.call(document.querySelectorAll('fin-hypergrid-behavior-json'),
+			function(behavior){
+				if (behavior.setData) {
+					behavior.setData(generateRandomData())
+				}
+			})
+	
+	tmp = null;
+
+	return requestAnimationFrame(fakeTicks);
+}())
+
+
+/**
  * 
  * 	Hypergrid setup
  * 	
@@ -147,7 +171,7 @@ function randomRow() {
 }
 
 function generateRandomData() {
-    var rowCount = 1000;
+    var rowCount = 10;
     var data = new Array(rowCount);
     for (var i = 0; i < rowCount; i++) {
         data[i] = randomRow();

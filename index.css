@@ -46,7 +46,7 @@ body {
 .winctrl {
 	width: 400;
 	height: 205;
-	background-color: slategray;
+	background-color: gainsboro;
 	position: absolute;
 	top:50%;
 	left: 50%;
@@ -88,11 +88,15 @@ body {
 	text-align: center;
 }
 .close {
+	
 	width: 20px;
 	height: 20px;
-	border-radius: 10px 10px;
-	background-color: firebrick;
-	margin-left: 130px;
+	cursor: pointer;
+	margin-left: 0px;
+	position: absolute;
+	top:2px;
+	left: 90%;
+	
 }
 fin-hypergrid {
 	width: 100%;
@@ -111,7 +115,7 @@ h2 {
 	margin: 10px 0;
 }
 button {
-	background-color: springgreen;
+	background-color: slategray;
 }
 #close {
 	color: firebrick;
