@@ -3,13 +3,25 @@ var targetedElement, startingTrans, x, y, grid,
     OFFSET_Y = 210,
     COLUMNS = 25,
     NUM_LADDERS = 200,
-    lnfOverrides = genLnfOverrides();
+    lnfOverrides = genLnfOverrides(),
+    win;
 
 /**
  *
  * 	Create and append hypergrids
- * 	
+ *
  */
+
+document.querySelector("#fullscreen_off_btt").addEventListener('click', function(){
+  //alert("FullScreen off ");
+  win.restore();
+})
+
+document.querySelector("#fullscreen_btt").addEventListener('click', function(){
+//  alert("FullScreen on ");
+win.maximize();
+
+})
 
 document.querySelector('#mk-wind')
     .addEventListener('click', function(e) {
@@ -46,7 +58,7 @@ document.querySelector('#mk-wind')
 /**
  *
  * 	Close the app
- * 	
+ *
  */
 
 document.querySelector('#close')
@@ -58,7 +70,7 @@ document.querySelector('#close')
 /**
  *
  * 	Rudimentary drag handling. Transform-translate elements based mouse move
- * 	
+ *
  */
 
 document.addEventListener('mousedown', function(e) {
@@ -115,11 +127,11 @@ document.addEventListener('mousemove', function(e) {
 /**
  *
  * 	Show after getting the monitor info and making the app fill the screen
- * 	
+ *
  */
 
 fin.desktop.main(function() {
-    var win = fin.desktop.Window.getCurrent();
+    win = fin.desktop.Window.getCurrent();
 
     fin.desktop.System.getMonitorInfo(function(monitorInfo) {
         var mainWindow = fin.desktop.Window.getCurrent(),
@@ -135,7 +147,7 @@ fin.desktop.main(function() {
 /**
  *
  * 	Simulate ticking data
- * 	
+ *
  */
 
 (function fakeTicks(){
@@ -147,7 +159,7 @@ fin.desktop.main(function() {
 					behavior.setData(generateRandomData())
 				}
 			})
-	
+
 	tmp = null;
 
 	return requestAnimationFrame(fakeTicks);
@@ -155,9 +167,9 @@ fin.desktop.main(function() {
 
 
 /**
- * 
+ *
  * 	Hypergrid setup
- * 	
+ *
  */
 
 function randomRow() {

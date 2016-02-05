@@ -37,7 +37,7 @@
 	background-color: goldenrod;
 }
 body {
-	background-color:rgb(255,0,255);
+	background-color:rgb(200,200,200);
 	overflow-x: hidden;
 	-webkit-user-select: none;
 	/*background-color:rgb(54,0,54);*/
@@ -46,7 +46,7 @@ body {
 .winctrl {
 	width: 400;
 	height: 205;
-	background-color: gainsboro;
+	background: url("image/background.png");
 	position: absolute;
 	top:50%;
 	left: 50%;
@@ -105,12 +105,12 @@ fin-hypergrid {
 
 p {
 	-webkit-user-select: none;
-	background-color: gainsboro;
+	background-color: transparent;
 	padding: 2px;
 }
 
 h2 {
-	background-color: gainsboro;
+	background-color: transparent;
 	display: inline-block;
 	margin: 10px 0;
 }
