@@ -10,7 +10,8 @@ $ npm install
 NB: you may need to run sudo npm install on a Mac
 
 
-There is a simple Node/Express server you need to run to get this working. Navigate to the root directory in the termainal and run ```
+There is a simple Node/Express server you need to run to get this working. Navigate to the root directory in the termainal and run 
+```
 node server
 ```
 
@@ -21,12 +22,13 @@ Then download the insaller below and install the app.
 Transparency is set in the app.cofig 
 
 ```
-        "alphaMask": {
-            "red": 200,
-            "green": 200,
-            "blue": 200
-        },
+   "alphaMask": {
+   "red": 200,
+   "green": 200,
+   "blue": 200
+ },
 ```
+
 The pseudo translucent effect is acheived by setting a four pixel checkerboard with top left and botton right in the alpha colour rgb(200,200,200). 
 
 The alpha channel is all or nothing - there is no alpha percentage or antialiasing at present so curves, translucence and gradients will appear crude and require some ingenuity to implement. The alpha colour will need careful consideration to avoid fringing on anti aliased text and images.
