@@ -15,7 +15,7 @@ There is a simple Node/Express server you need to run to get this working. Navig
 node server
 ```
 
-Then download the insaller below and install the app. 
+Then download the installer below and install the app. 
 
 [https://dl.openfin.co/services/download?fileName=WindowTransparency&config=http://localhost:8080/app.json](https://dl.openfin.co/services/download?fileName=WindowTransparency&config=http://localhost:8080/app.json)
 
@@ -29,6 +29,6 @@ Transparency is set in the app.cofig
  },
 ```
 
-The pseudo translucent effect is acheived by setting a four pixel checkerboard with top left and botton right in the alpha colour rgb(200,200,200). 
+The pseudo translucent effect is achieved by setting a four pixel checkerboard with top left and bottom right in the alpha colour rgb(200,200,200). 
 
 The alpha channel is all or nothing - there is no alpha percentage or antialiasing at present so curves, translucence and gradients will appear crude and require some ingenuity to implement. The alpha colour will need careful consideration to avoid fringing on anti aliased text and images.
